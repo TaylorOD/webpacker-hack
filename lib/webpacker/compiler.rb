@@ -69,7 +69,7 @@ class Webpacker::Compiler
 
       stdout, stderr, status = Open3.capture3(
         webpack_env,
-        "#{RbConfig.ruby} ./bin/webpack",
+        "#{RbConfig.ruby} NODE_OPTIONS=--openssl-legacy-provider ./bin/webpacker",
         chdir: File.expand_path(config.root_path)
       )
 
